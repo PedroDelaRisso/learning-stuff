@@ -5,7 +5,7 @@ Additional stuff that I'm learning alongside this:
 
 If you're also using Bun, any mention of ``npm`` below can be replaced by ``bun``.
 
-# Default README below this line (I don't want to get rid of it right now)
+# Default README below this line
 ---
 ## Usage
 
