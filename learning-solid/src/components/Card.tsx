@@ -12,7 +12,6 @@ export default function Card(props: IProps) {
       classList={{'rounded-md': props.rounded, 'shadow-md': !props.flat}}
     >
       {props.children}
-      <button class="btn">Click me!</button>
     </div>
   )
 }
