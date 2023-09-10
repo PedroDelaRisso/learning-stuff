@@ -1,4 +1,4 @@
-import { createResource } from "solid-js";
+import { For, Show, createResource } from "solid-js";
 import Card from "./Card";
 
 const fetchProducts = async () => {
@@ -13,38 +13,17 @@ export default function Home() {
   console.log(products());
 
   return (
-    <div class="grid grid-cols-4 gap-10 my-4">
-      <Card rounded flat={false}>
-        <h2>
-          Unique product name number one
-        </h2>
-        <br />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem libero est pariatur earum, rerum sunt!
-        </p>
-        <button class="btn">Click me!</button>
-      </Card>
-      <Card rounded flat={false}>
-        <h2>
-          Unique product name number two
-        </h2>
-        <br />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, distinctio?
-        </p>
-        <button class="btn">Click me!</button>
-      </Card>
-      <Card rounded flat={false}>
-        <h2>
-          Unique product name number three
-        </h2>
-        <br />
-        <p>
-          Lorem ipsum dolor sit amet.
-        </p>
-        <button class="btn">Click me!</button>
-        <p>{console.log(products(), products.loading)}</p>
-      </Card>
-    </div>
+    <Show when={products()} fallback={<p>Loading...</p>}>
+      <div class="grid grid-cols-4 gap-10 my-4">
+        <For each={products()}>
+          {(product) => (
+            <Card rounded flat>
+              <img src={product.img} alt="" />
+              <h2 class="my-3 font-bold">{product.title}</h2>
+            </Card>
+          )}
+        </For>
+      </div>
+    </Show>
   )
 }
