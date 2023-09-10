@@ -1,11 +1,17 @@
-export default function Card(props: { title: string }) {
+import { JSXElement } from "solid-js";
+
+interface IProps {
+  rounded: boolean;
+  flat: boolean;
+  children: JSXElement[];
+}
+
+export default function Card(props: IProps) {
   return (
-    <div class="bg-white p-4 text-center rounded-md shadow-ms">
-      <h2>
-        {props.title || "Card title goes here"}
-      </h2>
-      <br />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem libero est pariatur earum, rerum sunt!</p>
+    <div class="bg-white p-4 text-center"
+      classList={{'rounded-md': props.rounded, 'shadow-md': !props.flat}}
+    >
+      {props.children}
       <button class="btn">Click me!</button>
     </div>
   )

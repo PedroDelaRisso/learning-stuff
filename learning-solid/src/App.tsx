@@ -10,9 +10,29 @@ function App() {
       </header>
       <img class="rounded-md" src={banner} alt="store's unique fantastic banner" />
       <div class="grid grid-cols-4 gap-10 my-4">
-        <Card title="INSANE unique product name"/>
-        <Card title="YET ANOTHER unique product name"/>
-        <Card title="YOU GUESSED IT! another unique product name"/>
+        <Card rounded flat={false}>
+          <h2>
+            Card title goes here
+          </h2>
+          <br />
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem libero est pariatur earum, rerum sunt!</p>
+        </Card>
+        <Card rounded flat={false}>
+          <h1>
+            jwjw
+          </h1>
+          <h2>
+            jaj
+          </h2>
+        </Card>
+        <Card rounded flat={false}>
+          <h1>
+            wowo
+          </h1>
+          <h2>
+            jej
+          </h2>
+        </Card>
       </div>
     </div>
   )
