@@ -1,9 +1,9 @@
 import { JSXElement } from "solid-js";
 
 interface IProps {
-  rounded: boolean;
-  flat: boolean;
-  children: JSXElement[];
+  rounded?: boolean;
+  flat?: boolean;
+  children: JSXElement[] | JSXElement;
 }
 
 export default function Card(props: IProps) {

@@ -1,6 +1,8 @@
 import { createSignal } from 'solid-js';
+import { Routes, Route, A } from '@solidjs/router';
 import banner from './assets/banner.png';
-import Card from './components/Card';
+import Home from './components/Home';
+import Cart from './components/Cart';
 
 function App() {
   const [darkTheme, setDarkTheme] = createSignal(false);
@@ -22,40 +24,14 @@ function App() {
           light_mode
         </span>
         <h1>Store's Fantastic Unique Name</h1>
+        <A href="/">Home</A>
+        <A href="/cart">Cart</A>
       </header>
       <img class="rounded-md" src={banner} alt="store's unique fantastic banner" />
-      <div class="grid grid-cols-4 gap-10 my-4">
-        <Card rounded flat={false}>
-          <h2>
-            Unique product name number one
-          </h2>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem libero est pariatur earum, rerum sunt!
-          </p>
-          <button class="btn">Click me!</button>
-        </Card>
-        <Card rounded flat={false}>
-          <h2>
-            Unique product name number two
-          </h2>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, distinctio?
-          </p>
-          <button class="btn">Click me!</button>
-        </Card>
-        <Card rounded flat={false}>
-          <h2>
-            Unique product name number three
-          </h2>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet.
-          </p>
-          <button class="btn">Click me!</button>
-        </Card>
-      </div>
+      <Routes>
+        <Route path="/" component={Home} />
+        <Route path="/cart" component={Cart} />
+      </Routes>
     </div>
   )
 }
