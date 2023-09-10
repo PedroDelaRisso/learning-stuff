@@ -1,3 +1,10 @@
+# I'm learning Solidjs
+Additional stuff that I'm learning alongside this:
+- Bun
+- Tailwindcss
+
+# Default README below this line
+---
 ## Usage
 
 ```bash
