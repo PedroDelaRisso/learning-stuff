@@ -1,9 +1,11 @@
-# I'm learning Solidjs
+# I'm learning [SolidJS](https://www.solidjs.com)
 Additional stuff that I'm learning alongside this:
-- Bun
-- Tailwindcss
+- [Bun](https://bun.sh)
+- [Tailwindcss](https://tailwindcss.com)
 
-# Default README below this line
+If you're also using Bun, any mention of ``npm`` below can be replaced by ``bun``.
+
+# Default README below this line (I don't want to get rid of it right now)
 ---
 ## Usage
 
