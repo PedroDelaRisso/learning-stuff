@@ -3,8 +3,16 @@
 	"tasks": [
 		{
 			"type": "shell",
+			"icon": {"id": "server", "color": "terminal.ansiMagenta"},
 			"command": "cd ${input:folderName}; bun dev",
 			"label": "Run bun dev",
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"icon": {"id": "server", "color": "terminal.ansiGreen"},
+			"command": "cd ${input:folderName}; json-server -w -p 4000 ./data/db.json",
+			"label": "Run json server",
 			"problemMatcher": []
 		},
 	],
