@@ -24,4 +24,6 @@ npm run build
 # using bun
 bun run build
 ```
+And it looks like this, so far:
+![image](https://github.com/PedroDelaRisso/learning-stuff/assets/37818660/ed8e4779-9dab-4ea1-a925-8e92ed14a77b)
 
