@@ -1,0 +1,20 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "cd ${input:folderName}; bun dev",
+			"label": "Run bun dev",
+			"problemMatcher": []
+		},
+	],
+	"inputs": [
+		{
+			"id": "folderName",
+			"type": "pickString",
+			"description": "Select a folder to run the command on",
+			"options": ["learning-solid"],
+			"default": "learning-solid"
+		}
+	]
+}
