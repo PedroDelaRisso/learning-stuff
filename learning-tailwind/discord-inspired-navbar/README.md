@@ -6,14 +6,25 @@ This project has been made using [this tutorial by Fireship on YouTube](https://
 This is really just looks, there is no events or logic behind it.
 
 
+
 ## Usage
-```
-# Using npm
+```bash
+# using npm
 npm i
 npm run dev
-# Using bun
+
+# using bun
 bun i
 bun run dev
+```
+
+## Building
+```bash
+# using npm
+npm run build
+
+# using bun
+bun run build
 ```
 
 And it looks like this:
